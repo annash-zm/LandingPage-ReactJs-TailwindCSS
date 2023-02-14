@@ -13,14 +13,20 @@ import "slick-carousel/slick/slick-theme.css";
 import Subscribe from './component/Subscribe';
 import Footer from './component/Footer';
 
+import { Helmet } from 'react-helmet';
+
 
 function App() {
-  Aos.init ({
-    duration : 1800,
-    offset : 0
+  Aos.init({
+    duration: 1800,
+    offset: 0
   })
   return (
     <div className="overflow-hidden bg-gray-50">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Landing Page</title>
+      </Helmet>
       <FirstSection />
       <About />
       <Features />
